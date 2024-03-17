@@ -2,7 +2,7 @@
  	@author 	 harsh-dhamecha
  	@email       harshdhamecha10@gmail.com
  	@create date 2024-03-09 18:00:15
- 	@modify date 2024-03-17 17:30:35
+ 	@modify date 2024-03-17 17:47:25
  	@desc        Main file for PDF QnA Application
  '''
 
@@ -10,7 +10,6 @@ import os
 import streamlit as st
 from langchain_openai.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
-import pdfplumber
 from PyPDF2 import PdfReader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain_text_splitters import CharacterTextSplitter
@@ -28,11 +27,6 @@ def read_data(pdf_filepath):
         content = page.extract_text()
         if content:
             raw_text += content
-    # data = []
-    # with pdfplumber.load(uploaded_file) as pdf:
-    #     pages = pdf.pages
-    #     for p in pages:
-    #         data.append(p.extract_tables())
     return raw_text
 
 
@@ -62,15 +56,19 @@ def get_response(chain, docs, question):
     response = chain.run(input_documents=docs, question=question)
     return response
 
-st.subheader(':green[Upload a file and Ask Questions]')
+
+st.subheader('**:green[Upload a file and Ask Questions]**')
 uploaded_file = st.file_uploader(':blue[Choose your .pdf file]', type=['pdf' ,'docx', 'txt'])
 if uploaded_file is not None:
-    question = st.text_input('What you would like to know about PDF?', key='input')
+    question = st.text_input(':orange[What would you like to know about PDF?]', key='input')
     submit_btn = st.button('Ask the Question')
     if submit_btn:
-        chain = load_chain()
-        document = read_data(uploaded_file)
-        texts = split_text(document)
-        doc_search = load_doc_search(texts, question)
-        response = get_response(chain, doc_search, question)
-        st.write(response)
+        try:
+            chain = load_chain()
+            document = read_data(uploaded_file)
+            texts = split_text(document)
+            doc_search = load_doc_search(texts, question)
+            response = get_response(chain, doc_search, question)
+            st.write(response)
+        except:
+            st.write(':[red]An error has occured! Please try again')
