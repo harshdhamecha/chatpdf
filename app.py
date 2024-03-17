@@ -2,7 +2,7 @@
  	@author 	 harsh-dhamecha
  	@email       harshdhamecha10@gmail.com
  	@create date 2024-03-09 18:00:15
- 	@modify date 2024-03-17 18:06:56
+ 	@modify date 2024-03-17 18:47:27
  	@desc        Main file for PDF QnA Application
  '''
 
@@ -16,7 +16,7 @@ from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 
 
-os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 st.set_page_config(page_title='PDF Q&A')
 
 
