@@ -2,7 +2,7 @@
  	@author 	 harsh-dhamecha
  	@email       harshdhamecha10@gmail.com
  	@create date 2024-03-09 18:00:15
- 	@modify date 2024-03-17 17:47:25
+ 	@modify date 2024-03-17 18:06:56
  	@desc        Main file for PDF QnA Application
  '''
 
@@ -58,7 +58,7 @@ def get_response(chain, docs, question):
 
 
 st.subheader('**:green[Upload a file and Ask Questions]**')
-uploaded_file = st.file_uploader(':blue[Choose your .pdf file]', type=['pdf' ,'docx', 'txt'])
+uploaded_file = st.file_uploader(':blue[Choose your .pdf file]', type=['pdf'])
 if uploaded_file is not None:
     question = st.text_input(':orange[What would you like to know about PDF?]', key='input')
     submit_btn = st.button('Ask the Question')
