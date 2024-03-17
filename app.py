@@ -2,7 +2,7 @@
  	@author 	 harsh-dhamecha
  	@email       harshdhamecha10@gmail.com
  	@create date 2024-03-09 18:00:15
- 	@modify date 2024-03-17 18:48:29
+ 	@modify date 2024-03-17 18:55:26
  	@desc        Main file for PDF QnA Application
  '''
 
@@ -70,5 +70,5 @@ if uploaded_file is not None:
             doc_search = load_doc_search(texts, question)
             response = get_response(chain, doc_search, question)
             st.write(response)
-        except:
-            st.write(':[red]An error has occured! Please try again')
+        except Exception as e:
+            st.write(f'{e}: An error has occured!')
