@@ -1,5 +1,6 @@
 # Document-QnA
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://document-qna.streamlit.app/)
+
 An Application for "Upload a Document and Talk to It" using Gemini Pro and Streamlit. 
 
 ## Demo Video
