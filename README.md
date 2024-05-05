@@ -1,4 +1,4 @@
-# Document-QnA
+# ChatPDF
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://document-qna.streamlit.app/)
 
 An Application for "Upload a Document and Talk to It" using GPT 3.5 and Streamlit. 
