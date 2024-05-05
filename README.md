@@ -8,8 +8,8 @@ Releasing soon...
 
 ## Install
 ```bash
-git clone https://github.com/harshdhamecha/Document-QnA.git
-cd Question-Paper-Generator
+git clone https://github.com/harshdhamecha/chatpdf.git
+cd chatpdf
 conda create -n langchain python==3.9.18
 conda activate langchain
 pip install -r requirements.txt
