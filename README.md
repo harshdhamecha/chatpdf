@@ -1,5 +1,5 @@
 # ChatPDF
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://document-qna.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chattpdf.streamlit.app/)
 
 An Application for "Upload a PDF and Chat" using GPT 3.5 and Streamlit. 
 
