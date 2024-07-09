@@ -17,7 +17,7 @@ from langchain_community.vectorstores import FAISS
 
 
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
-st.set_page_config(page_title='PDF Q&A')
+st.set_page_config(page_title='ChatPDF')
 
 
 def read_data(pdf_filepath):
