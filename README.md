@@ -4,7 +4,7 @@
 An Application for "Upload a PDF and Chat" using GPT 3.5 and Streamlit. 
 
 ## Demo Video
-Releasing soon...
+[Watch on YouTube](https://youtu.be/7tmLNm8tr_M)
 
 ## Install
 ```bash
